@@ -3,3 +3,95 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+header {
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 960px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+
+    li {
+        list-style-type: none;
+
+        button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            gap: 5px;
+            transition: transform 0.2s;
+
+            img {
+                width: 30px;
+            }
+
+            #linLogo {
+                filter: grayscale(1) contrast(100) brightness(1);
+            }
+
+            p::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 3px;
+                background: #000;
+                transition: width .5s;
+                margin: auto auto;
+            }
+        }
+
+        button:hover {
+            transform: scale(110%);
+
+            p::after {
+                width: 100%;
+            }
+        }
+    }
+
+    #about:hover {
+        img {
+            animation: about-logo 1s ease-in-out forwards;
+        }
+    }
+
+    #portfolio:hover {
+        img {
+            content: url('./images/portfolio_active.png');
+        }
+    }
+
+    #contact:hover {
+        img {
+            content: url('./images/contact_active.png');
+        }
+    }
+
+    #resume:hover {
+        img {
+            content: url('./images/resume_active.png');
+        }
+    }
+}

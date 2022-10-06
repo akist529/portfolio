@@ -1,0 +1,29 @@
+@keyframes about-logo {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(20deg) scale(120%);
+    }
+    40% {
+        transform: rotate(-20deg) scale(120%);
+    }
+    60% {
+        transform: rotate(20deg) scale(120%);
+    }
+    80% {
+        transform: rotate(-20deg) scale(120%);
+    }
+    100% {
+        transform: rotate(0deg) scale(120%);
+    }
+}
+
+@keyframes header-underline {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
