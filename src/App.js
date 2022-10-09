@@ -10,10 +10,12 @@ function App () {
   return (
     <div id="app">
       <Header />
-      <Landing />
-      <About />
-      <Portfolio />
-      <Contact />
+      <div id="content">
+        <Landing />
+        <About />
+        <Portfolio />
+        <Contact />
+      </div>
     </div>
   )
 }

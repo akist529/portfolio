@@ -17,19 +17,19 @@ export default function Header () {
         <nav>
           <ul id='header-nav'>
             <li>
-              <button id='about'>
+              <button id='btn-about'>
                 <img id='aboutLogo' alt='aboutLogo' src={aboutLogo} />
                 <p>About</p>
               </button>
             </li>
             <li>
-              <button id='portfolio'>
+              <button id='btn-portfolio'>
                 <img id='portLogo' alt='portLogo' src={portLogo} />
                 <p>Portfolio</p>
               </button>
             </li>
             <li>
-              <button id='contact'>
+              <button id='btn-contact'>
                 <img id='contactLogo' alt='contactLogo' src={contactLogo} />
                 <p>Contact</p>
               </button>
@@ -39,19 +39,19 @@ export default function Header () {
         <div>
           <ul id='header-links'>
             <li>
-              <button id='github'>
+              <button id='btn-github'>
                 <p>GitHub</p>
                 <img id='gitLogo' alt='gitLogo' src={gitLogo} />
               </button>
             </li>
             <li>
-              <button id='linkedin'>
+              <button id='btn-linkedin'>
                 <p>LinkedIn</p>
                 <img id='linLogo' alt='linLogo' src={linLogo} />
               </button>
             </li>
             <li>
-              <button id='resume'>
+              <button id='btn-resume'>
                 <p>Resume</p>
                 <img id='resumeLogo' alt='resumeLogo' src={resumeLogo} />
               </button>
