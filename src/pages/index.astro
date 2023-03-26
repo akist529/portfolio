@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro'
+import HeaderView from '../views/HeaderView.vue'
+import IntroView from '../views/IntroView.vue'
+import FooterView from '../views/FooterView.vue'
+---
+
+<Layout title="Alex Kist - Portfolio">
+	<HeaderView client:load />
+	<div id="content">
+		<IntroView />
+	</div>
+	<FooterView />
+</Layout>
+
+<style lang="scss">
+	#content {
+		background-color: #272727;
+		opacity: 0.8;
+		background: linear-gradient(135deg, #36363655 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #363636 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #36363655 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #363636 25%, #272727 25%) 0px 0/ 20px 20px;
+	}
+</style>

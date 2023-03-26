@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "@images/*": ["../public/images/*"]
+    }
+  }
+}
