@@ -62,6 +62,7 @@ export default defineComponent({
         right: 0;
         position: fixed;
         height: 80px;
+        z-index: 1;
 
         background: rgb(51, 51, 51);
         padding: 10px 5px;
