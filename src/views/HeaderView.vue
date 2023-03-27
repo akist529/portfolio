@@ -46,6 +46,9 @@ export default defineComponent({
     beforeMount () {
         this.handleWindowWidth()
         window.addEventListener("resize", this.handleWindowWidth)
+    },
+    beforeUnmount () {
+        window.removeEventListener("resize", this.handleWindowWidth)
     }
 })
 </script>
@@ -57,18 +60,33 @@ export default defineComponent({
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        position: fixed;
-        height: 80px;
-        z-index: 1;
+        height: 0;
+        z-index: 2;
 
         background: rgb(51, 51, 51);
-        padding: 10px 5px;
+        border-bottom: 2px solid rgb(187, 187, 187);
+        box-shadow: 5px 5px 20px rgb(0,0,0);
+        padding: 0;
+
+        animation-name: header-spawn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
 
         nav {
             width: 100%;
+            position: relative;
+            right: 100vw;
+            opacity: 0%;
+
+            animation-name: nav-spawn;
+            animation-duration: 0.8s;
+            animation-delay: 0.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
         }
 
         ul {
@@ -78,6 +96,47 @@ export default defineComponent({
             align-items: center;
             list-style-type: none;
             width: 100%;
+        }
+
+        > ul {
+            position: relative;
+            left: 100vw;
+            opacity: 0%;
+
+            animation-name: social-spawn;
+            animation-duration: 0.8s;
+            animation-delay: 0.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes nav-spawn {
+            0% {
+                opacity: 0%;
+                right: 100vw;
+            } 100% {
+                opacity: 100%;
+                right: 0;
+            }
+        }
+
+        @keyframes social-spawn {
+            0% {
+                opacity: 0%;
+                left: 100vw;
+            } 100% {
+                opacity: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    @keyframes header-spawn {
+        0% {
+            height: 0;
+        } 100% {
+            height: 80px;
+            padding: 10px 5px;
         }
     }
 

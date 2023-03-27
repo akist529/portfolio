@@ -1,7 +1,7 @@
 <template>
     <div className="project">
         <div className="project-details">
-            <img src="@images/phone.webp" />
+            <img src="@images/phone.svg" />
             <div>
                 <slot></slot>
             </div>
@@ -22,3 +22,13 @@ export default defineComponent({
     props: ['techStack']
 })
 </script>
+
+<style scoped lang="scss">
+    .project {
+        z-index: 1;
+
+        img {
+            filter: invert(1);
+        }
+    }
+</style>

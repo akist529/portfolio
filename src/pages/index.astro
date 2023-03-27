@@ -1,24 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import HeaderView from '../views/HeaderView.vue'
-import IntroView from '../views/IntroView.vue'
+import LandingView from '../views/LandingView.vue'
 import AboutView from '../views/AboutView.vue'
+import PortfolioView from '../views/PortfolioView.vue'
 import FooterView from '../views/FooterView.vue'
 ---
 
 <Layout title="Alex Kist - Portfolio">
 	<HeaderView client:load />
-	<div id="content">
-		<IntroView />
-		<AboutView />
+	<div id="app">
+		<div id="app-content">
+			<LandingView />
+			<AboutView />
+			<PortfolioView />
+		</div>
 	</div>
 	<FooterView />
 </Layout>
 
-<style lang="scss">
-	#content {
-		background: linear-gradient(135deg, #36363655 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #363636 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #36363655 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #363636 25%, #272727 25%) 0px 0/ 20px 20px;
-		display: flex;
-		flex-direction: column;
+<style scoped lang="scss">
+	#app {
+		#app-content {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			z-index: 1;
+			background: linear-gradient(135deg, #2c2c2c55 25%, transparent 25%) -21px 0/ 42px 42px, linear-gradient(225deg, #2c2c2c 25%, transparent 25%) -21px 0/ 42px 42px, linear-gradient(315deg, #2c2c2c55 25%, transparent 25%) 0px 0/ 42px 42px, linear-gradient(45deg, #2c2c2c 25%, #0e0e0e 25%) 0px 0/ 42px 42px;
+		}
 	}
 </style>

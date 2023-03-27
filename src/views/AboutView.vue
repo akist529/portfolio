@@ -14,10 +14,11 @@
 
 <style scoped lang="scss">
     .section-about {
-        padding-top: 80px;
         display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        z-index: 1;
 
         div {
             display: flex;
