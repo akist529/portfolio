@@ -1,16 +1,39 @@
 <template>
-    <Project :techStack="['Next.js', 'TypeScript', 'SCSS', 'Go', 'SQLite']">
-        <h2>Bar.Home</h2>
-        <p>Provides drink recipes based on available ingredients the user enters. Recipes may substitute ingredients where possible.</p>
-    </Project>
-    <Project :techStack="['Vue.js', 'TypeScript', 'SCSS', 'Strapi']">
-        <h2>Gym Tracker</h2>
-        <p>Allows users to log and track their workouts based on a variety of database exercises provided.</p>
-    </Project>
-    <Project :techStack="['React', 'JavaScript', 'SCSS']">
-        <h2>"Tom Clancy's Rainbow Six: Siege" Info Suite</h2>
-        <p>An informative app for the competitive first-person shooter video game "Tom Clancy's Rainbow Six: Siege". Users can explore maps of each of the game's levels and browse through information on each of the game's operators, offering helpful tactics and suggestions.</p>
-    </Project>
+<section class="section-portfolio reveal" id="#portfolio">
+    <header>
+        <h3>Projects</h3>
+        <span id="underline"></span>
+    </header>
+    <main>
+        <Project 
+            :name="'MakeDrink'"
+            :complete="true"
+            :liveLink="'https://makedr.ink'"
+            :gitHub="'https://github.com/akist529/cocktail-mixer'"
+            :techStack="['TypeScript', 'SASS', 'Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']"
+            :windowWidth="windowWidth">
+            <ul>
+                <li>Full stack cocktail builder application</li>
+                <li>Uses Redux store to track entered ingredients</li>
+                <li>Recipes are logically served based on available ingredients and substitutes, if possible</li>
+            </ul>
+        </Project>
+        <Project 
+            :name="'Gym Tracker'"
+            :complete="false"
+            :liveLink="''"
+            :gitHub="''"
+            :techStack="['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Strapi']"
+            :windowWidth="windowWidth">
+            <ul>
+                <li>Full stack fitness tracking application</li>
+                <li>Fetches data from public API to provide list of exercises</li>
+                <li>Uses Strapi backend to manage user data such as custom workouts, routines and body measurements</li>
+                <li>Uses Pinia store to manage client state</li>
+            </ul>
+        </Project>
+    </main>
+</section>
 </template>
 
 <script lang="ts">
@@ -18,8 +41,88 @@ import { defineComponent } from 'vue'
 import Project from 'components/Project.vue'
 
 export default defineComponent({
+    data () {
+        let windowWidth = 0;
+
+        return ({
+            windowWidth
+        });
+    },
+    methods: {
+        handleWindowWidth () {
+            this.windowWidth = window.innerWidth;
+        },
+        reveal () {
+            var reveals = document.querySelectorAll(".reveal");
+            
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+    },
     components: {
         Project
+    },
+    mounted () {
+        this.handleWindowWidth();
+        window.addEventListener("scroll", this.reveal);
+        this.reveal();
+
+        this.$nextTick(() => {
+            window.addEventListener("resize", this.handleWindowWidth);
+        })
+    },
+    beforeDestroy () {
+        window.removeEventListener("resize", this.handleWindowWidth);
+        window.removeEventListener("scroll", this.reveal);
     }
-})
+    
+});
 </script>
+
+<style scoped lang="scss">
+.section-portfolio {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    scroll-margin-top: 100px;
+
+    header {
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        h3 {
+            font-size: 48px;
+        }
+
+        #underline {
+            z-index: 998;
+            width: 256px;
+            height: 2px;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+    }
+
+    main {
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+    }
+}
+</style>

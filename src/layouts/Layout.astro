@@ -11,7 +11,7 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -20,14 +20,57 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style lang="scss" is:global>
-	@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
-	@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		color: white;
-		font-family: 'Josefin Sans';
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+	font-family: 'Josefin Sans';
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: url('/images/backgrounds/gravel.png');
+	font-family: 'Kanit';
+	text-align: center;
+}
+
+h1 {
+	font-size: 96px;
+	letter-spacing: 8px;
+	filter: drop-shadow(0px 12px 1px #000);
+}
+
+h2 {
+	font-size: 32px;
+	letter-spacing: 4px;
+	filter: drop-shadow(0px 5px 1px #000);
+}
+
+h3 {
+	filter: drop-shadow(5px 5px 5px black);
+}
+
+h4 {
+	font-size: 32px;
+	letter-spacing: 2px;
+	background-color: rgb(76, 99, 116);
+		background-blend-mode: overlay;
+}
+
+@media only screen and (min-width: 600px) {
+	h1 {
+		font-size: 80px;
 	}
+}
 </style>

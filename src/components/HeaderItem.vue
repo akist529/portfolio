@@ -1,7 +1,11 @@
 <template>
     <li class="nav-item">
         <button @mouseover="addAnimation" @mouseleave="removeAnimation">
-            <img v-show="!mobileMenu" :id="name" :alt="name" :src="`images/${getImageFile()}.svg`" />
+            <img 
+                v-show="!mobileMenu" 
+                :id="name" 
+                :alt="name" 
+                :src="`images/icons/${getImageFile()}.svg`" />
             <span>{{ name }}</span>
             <span v-show="mobileMenu" id="underline"></span>
         </button>
@@ -60,29 +64,37 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-    li {
-        button {
-            display: flex;
+    li button {
+        /* Positioning */
+        display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            border: none;
-            background: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 1rem;
+        /* Visual */
+        border: none;
+        background: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 1rem;
 
-            img {
-                filter: grayscale(1) invert(1);
-                width: auto;
-                max-height: 32px;
-            }
+        img {
+            filter: 
+                grayscale(1) 
+                invert(1);
+            width: auto;
+            height: 28px;
+        }
 
-            #underline {
-                width: 0%;
-                height: 3px;
-                background-color: white;
+        #underline {
+            width: 0%;
+            height: 3px;
+            background-color: white;
+        }
+
+        &:hover {
+            span {
+                color: rgb(180, 180, 180);
             }
         }
     }
@@ -109,15 +121,25 @@ export default defineComponent({
 
     @keyframes aboutAnimation {
         0% {
-            transform: rotate(0deg) scale(1);
+            transform: 
+                rotate(0deg) 
+                scale(1);
         } 25% {
-            transform: rotate(30deg) scale(1.2);
+            transform: 
+                rotate(30deg) 
+                scale(1.2);
         } 50% {
-            transform: rotate(0deg) scale(1.2);
+            transform: 
+                rotate(0deg) 
+                scale(1.2);
         } 75% {
-            transform: rotate(-30deg) scale(1.2);
+            transform: 
+                rotate(-30deg) 
+                scale(1.2);
         } 100% {
-            transform: rotate(0deg) scale(1.2);
+            transform: 
+                rotate(0deg) 
+                scale(1.2);
         }
     }
 
@@ -129,12 +151,10 @@ export default defineComponent({
         }
     }
 
-    @media screen and (min-width: 620px) {
-        li {
-            button {
-                flex-direction: column;
-                gap: 5px;
-            }
+    @media screen and (min-width: 600px) {
+        li button {
+            flex-direction: column;
+            gap: 5px;
         }
     }
 </style>

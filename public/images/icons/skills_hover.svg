@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="29.200001"
+   viewBox="0 -960 800 584.00002"
+   width="40"
+   version="1.1"
+   id="svg55"
+   sodipodi:docname="checklist.svg"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs59" />
+  <sodipodi:namedview
+     id="namedview57"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.583333"
+     inkscape:cx="20.02649"
+     inkscape:cy="15.89404"
+     inkscape:window-width="1920"
+     inkscape:window-height="928"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg55" />
+  <path
+     d="m 579,-376 -142,-142 42,-42 100,99 179,-179 42,43 z m 0,-320 -142,-142 42,-42 100,99 179,-179 42,43 z M 0,-452 v -60 h 360 v 60 z m 0,-320 v -60 h 360 v 60 z"
+     id="path53" />
+</svg>
