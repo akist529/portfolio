@@ -1,13 +1,15 @@
 <template>
     <li class="nav-item">
         <button @mouseover="addAnimation" @mouseleave="removeAnimation">
-            <img 
-                v-show="!mobileMenu" 
-                :id="name" 
-                :alt="name" 
-                :src="`images/icons/${getImageFile()}.svg`" />
+            <span v-show="!mobileMenu"
+                :id="name"
+                class="icon"
+                :style="{backgroundImage: `url(/images/icons/${getImageFile()}.svg)`}"
+            ></span>
             <span>{{ name }}</span>
-            <span v-show="mobileMenu" id="underline"></span>
+            <span v-show="mobileMenu"
+                id="underline"
+            ></span>
         </button>
     </li>
 </template>
@@ -78,12 +80,15 @@ export default defineComponent({
         text-transform: uppercase;
         font-size: 1rem;
 
-        img {
-            filter: 
-                grayscale(1) 
-                invert(1);
-            width: auto;
+        .icon {
+            background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            width: 28px;
             height: 28px;
+            content: '';
+            display: inline-block;
+            filter: grayscale(1) invert(1);
         }
 
         #underline {

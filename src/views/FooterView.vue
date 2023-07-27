@@ -3,9 +3,15 @@
         <span>AlexKist.com © {{ new Date().getFullYear() }}</span><br/>
         <div>
             <span>Built with</span>
-            <img alt="Vue" title="Vue" src="/images/icons/vue.svg" />
+            <img
+                alt="Vue"
+                title="Vue"
+                src="/images/icons/vue.svg" />
             <span>and</span>
-            <img alt="Astro" title="Astro" src="/images/icons/astro.svg" />
+            <img
+                alt="Astro"
+                title="Astro"
+                src="/images/icons/astro.svg" />
         </div>
         <span>Icons by Aranagraphics, Freepik, juicy_fish, Becris, Pixel Buddha Premium & Afian Rochmah Afif</span>
     </footer>

@@ -3,7 +3,7 @@
         <figure>
             <img 
                 alt="Alex Kist" 
-                src="images/about.jpeg" />
+                src="/images/about.jpeg" />
         </figure>
         <article class="about-content">
             <header class="about-header">
@@ -11,11 +11,6 @@
                     <h3>About</h3>
                     <span id="underline"></span>
                 </div>
-                <img 
-                    alt="About" 
-                    src="images/icons/about.svg" 
-                    width="32" 
-                    height="32" />
             </header>
             <strong>Hi, I'm Alex!</strong>
             <ul>
@@ -41,9 +36,9 @@
     position: relative;
     scroll-margin-top: 100px;
     animation-name: about-spawn;
-    animation-duration: 0.25s;
-    animation-delay: 0.25s;
-    animation-fill-mode: forwards;
+        animation-duration: 0.25s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
     opacity: 0%;
     top: 100vh;
 
@@ -98,27 +93,27 @@
                 }
 
                 &:nth-child(1)::before {
-                    background-image: url('images/icons/career-change.png');
+                    background-image: url('/images/icons/career-change.png');
                 }
 
                 &:nth-child(2)::before {
-                    background-image: url('images/icons/self-taught.png');
+                    background-image: url('/images/icons/self-taught.png');
                 }
 
                 &:nth-child(3)::before {
-                    background-image: url('images/icons/front-end.png');
+                    background-image: url('/images/icons/front-end.png');
                 }
 
                 &:nth-child(4)::before {
-                    background-image: url('images/icons/back-end.png');
+                    background-image: url('/images/icons/back-end.png');
                 }
 
                 &:nth-child(5)::before {
-                    background-image: url('images/icons/frontend-tech.png');
+                    background-image: url('/images/icons/frontend-tech.png');
                 }
 
                 &:nth-child(6)::before {
-                    background-image: url('images/icons/backend-tech.png');
+                    background-image: url('/images/icons/backend-tech.png');
                 }
             }
         }
@@ -131,7 +126,7 @@
             align-items: center;
             gap: 20px;
         position: absolute;
-            top: -17%;
+            top: -22%;
             left: 15%;
             z-index: 2;
         transform: translateX(-15%) translateY(50%);
@@ -145,7 +140,8 @@
         border-top: 3px solid rgb(130,35,35);
             border-left: 3px solid rgb(130,35,35);
             border-right: 3px solid rgb(130,35,35);
-            border-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         text-transform: uppercase;
 
         .about-title {
@@ -176,36 +172,17 @@
             }
         }
 
-        img {
-            /* Positioning */
-            position: relative;
-                bottom: 5px;
-                z-index: 999;
-
-            /* Visual */
-            filter: invert(1);
+        &::after {
+            background-image: url('/images/icons/about.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
             width: 32px;
             height: 32px;
+            display: inline-block;
+            content: '';
+            filter: invert(1);
         }
-    }
-
-    .about-header::after {
-        /* Positioning */
-        position: absolute;
-            bottom: 0px;
-            left: -3px;
-            z-index: 2;
-        width: calc(100% + 1px);
-        height: 25%;
-
-        /* Visual */
-        content: '';
-        border-left: 3px dotted rgb(130,35,35);
-            border-bottom: 3px dotted rgb(130,35,35);
-            border-right: 3px dotted rgb(130,35,35);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        background-image: url('/images/backgrounds/binding_dark.png');
     }
 
     img {

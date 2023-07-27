@@ -121,73 +121,73 @@ export default defineComponent({
             }
 
             &:nth-child(1)::after {
-                background-image: url('images/icons/html.svg');
+                background-image: url('/images/icons/html.svg');
             }
 
             &:nth-child(2)::after {
-                background-image: url('images/icons/css.svg');
+                background-image: url('/images/icons/css.svg');
             }
 
             &:nth-child(3)::after {
-                background-image: url('images/icons/sass.svg');
+                background-image: url('/images/icons/sass.svg');
             }   
 
             &:nth-child(4)::after {
-                background-image: url('images/icons/javascript.svg');
+                background-image: url('/images/icons/javascript.svg');
             }
 
             &:nth-child(5)::after {
-                background-image: url('images/icons/typescript.svg');
+                background-image: url('/images/icons/typescript.svg');
             }
 
             &:nth-child(6)::after {
-                background-image: url('images/icons/react.svg');
+                background-image: url('/images/icons/react.svg');
             }
 
             &:nth-child(7)::after {
-                background-image: url('images/icons/nextjs.svg');
+                background-image: url('/images/icons/nextjs.svg');
                 filter: invert(1);
             }
 
             &:nth-child(8)::after {
-                background-image: url('images/icons/redux.svg');
+                background-image: url('/images/icons/redux.svg');
             }
 
             &:nth-child(9)::after {
-                background-image: url('images/icons/vue.svg');
+                background-image: url('/images/icons/vue.svg');
             }
 
             &:nth-child(10)::after {
-                background-image: url('images/icons/pinia.svg');
+                background-image: url('/images/icons/pinia.svg');
             }
 
             &:nth-child(11)::after {
-                background-image: url('images/icons/vue-query.svg');
+                background-image: url('/images/icons/vue-query.svg');
             }
 
             &:nth-child(12)::after {
-                background-image: url('images/icons/astro.svg');
+                background-image: url('/images/icons/astro.svg');
             }
 
             &:nth-child(13)::after {
-                background-image: url('images/icons/nodejs.svg');
+                background-image: url('/images/icons/nodejs.svg');
             }
 
             &:nth-child(14)::after {
-                background-image: url('images/icons/expressjs.svg');
+                background-image: url('/images/icons/expressjs.svg');
                 filter: invert(1);
             }
 
             &:nth-child(15)::after {
-                background-image: url('images/icons/mongodb.svg');
+                background-image: url('/images/icons/mongodb.svg');
             }
 
             &:nth-child(16)::after {
-                background-image: url('images/icons/mysql.svg');
+                background-image: url('/images/icons/mysql.svg');
             }
 
             &:nth-child(17)::after {
-                background-image: url('images/icons/strapi.svg');
+                background-image: url('/images/icons/strapi.svg');
             }
         }
     }

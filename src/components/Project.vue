@@ -5,9 +5,9 @@
             <strong>IN PROGRESS</strong>
         </div>
         <picture>
-            <source media="(min-width:992px)" :srcset="`images/previews/${name.toLowerCase().replaceAll(' ', '')}-laptop.webp`" width="384" />
-            <source media="(min-width:600px)" :srcset="`images/previews/${name.toLowerCase().replaceAll(' ', '')}-tablet.webp`" width="256" />
-            <img :src="`images/previews/${name.toLowerCase().replaceAll(' ', '')}-mobile.webp`" :alt="`${name} Preview`" width="192" />
+            <source media="(min-width:992px)" :srcset="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-laptop.webp`" width="384" />
+            <source media="(min-width:600px)" :srcset="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-tablet.webp`" width="256" />
+            <img :src="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-mobile.webp`" :alt="`${name} Preview`" width="192" />
         </picture>
         <div class="description">
             <div class="desc-corner" style="top: 0; left: 0;"></div>
@@ -22,32 +22,16 @@
             <ul>
                 <li v-for="tech in techStack">
                     <span>{{ tech }}</span>
-                    <img 
-                        :alt="`${tech}`" 
-                        :src="`images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.svg`" 
-                        width="48" 
-                        height="48" />
+                    <span class="tech-img" :style="{backgroundImage: `url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.svg)`}"></span>
                 </li>
             </ul>
         </div>
         <ul class="links">
             <li>
-                <a :href="liveLink" target="_blank" class="link">Link
-                    <img 
-                        alt="GitHub Icon" 
-                        :src="`images/icons/double_arrow.svg`" 
-                        width="32" 
-                        height="32" />
-                </a>
+                <a :href="liveLink" target="_blank" class="link live-link">Link</a>
             </li>
             <li>
-                <a :href="gitHub" target="_blank" class="link">Repo
-                    <img 
-                        alt="GitHub Icon" 
-                        :src="`images/icons/github.svg`" 
-                        width="32" 
-                        height="32" />
-                </a>
+                <a :href="gitHub" target="_blank" class="link git-link">Repo</a>
             </li>
         </ul>
     </article>
@@ -208,13 +192,17 @@ export default defineComponent({
                     justify-content: center;
                     align-items: center;
 
-                span {
-                    color: rgb(180, 180, 180);
-                }
+                /* Visual */
+                color: rgb(180, 180, 180);
 
-                img {
+                .tech-img {
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
                     width: 48px;
                     height: 48px;
+                    content: '';
+                    display: inline-block;
                 }
             }
         }
@@ -253,6 +241,24 @@ export default defineComponent({
                 font-size: 24px;
                 height: 18px;
             }
+
+            &::after {
+                background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                content: '';
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+            }
+        }
+
+        .live-link::after {
+            background-image: url('/images/icons/double_arrow.svg');
+        }
+
+        .git-link::after {
+            background-image: url('/images/icons/github.svg');
         }
     }
 }
