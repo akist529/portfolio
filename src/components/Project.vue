@@ -1,6 +1,6 @@
 <template>
     <article class="project">
-        <h4>{{ name }}</h4>
+        <h4>&lt;{{ name }} /></h4>
         <div v-if="!complete" class="progress">
             <strong>IN PROGRESS</strong>
         </div>

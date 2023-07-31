@@ -36,6 +36,7 @@ export default defineComponent({
         justify-content: center;
         align-items: center;
     margin-top: 80px;
+    margin-bottom: 80px;
     
     h1, h2 {
         /* Visual */

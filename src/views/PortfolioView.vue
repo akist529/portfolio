@@ -23,7 +23,7 @@
             :complete="false"
             :liveLink="''"
             :gitHub="''"
-            :techStack="['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Strapi']"
+            :techStack="['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Strapi']"
             :windowWidth="windowWidth">
             <ul>
                 <li>Full stack fitness tracking application</li>
@@ -96,6 +96,7 @@ export default defineComponent({
         align-items: center;
         gap: 20px;
     scroll-margin-top: 100px;
+    margin-bottom: 10vw;
 
     header {
         display: flex;

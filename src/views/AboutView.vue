@@ -41,6 +41,7 @@
         animation-fill-mode: forwards;
     opacity: 0%;
     top: 100vh;
+    margin-bottom: 10vw;
 
     figure img {
         border: 20px dashed rgb(175,175,175);

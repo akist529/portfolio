@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="81.59404"
-   height="70.653183"
-   viewBox="0 0 213.58056 160.1637"
+   enable-background="new 0 0 2187.5 2500"
+   viewBox="0 0 2187.5 2500"
    version="1.1"
-   id="svg993"
-   sodipodi:docname="vue-query.svg"
+   id="svg1139"
+   sodipodi:docname="vuetify.svg"
+   width="2187.5"
+   height="2500"
    inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs997" />
+     id="defs1143" />
   <sodipodi:namedview
-     id="namedview995"
+     id="namedview1141"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -23,25 +24,25 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="6.03"
-     inkscape:cx="42.288557"
-     inkscape:cy="33.250415"
+     inkscape:zoom="0.2412"
+     inkscape:cx="1094.5274"
+     inkscape:cy="1250"
      inkscape:window-width="1920"
      inkscape:window-height="927"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg993" />
+     inkscape:current-layer="svg1139" />
   <path
-     fill="#ffd94c"
-     stroke="#002c4b"
-     stroke-width="32.63"
-     d="m 137.01027,-1.2199995 -30.22,52.3500005 -30.229995,-52.3500005 h -48.3 L 106.79027,134.78 l 78.53,-135.9999995 z"
-     id="path989" />
+     d="m 1093.8,0 h -511 l 511,1208"
+     fill="#1697f6"
+     id="path1133" />
   <path
-     fill="none"
-     stroke="#ff4154"
-     stroke-width="12.43"
-     d="m 137.01027,-1.2199995 -30.22,52.3500005 -30.229995,-52.3500005 h -48.3 L 106.79027,134.78 l 78.53,-135.9999995 z"
-     id="path991" />
+     d="M 1093.8,1562.5 V 2500 L 0,364.5 H 573 Z M 1093.8,0 h 511 l -511,1208"
+     fill="#7bc6ff"
+     id="path1135" />
+  <path
+     d="m 1614.5,364.5 h 573 L 1093.8,2500 v -937.5 z"
+     fill="#aeddff"
+     id="path1137" />
 </svg>
