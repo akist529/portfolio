@@ -59,6 +59,7 @@ export default defineComponent({
             background-blend-mode: normal;
                 background-color: rgba(50,50,50,1);
                 -webkit-background-clip: text;
+                -webkit-text-fill-color: white;
                 background-clip: text;
             animation-name: name-spawn;
                 animation-duration: 1s;

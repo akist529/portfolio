@@ -1,5 +1,6 @@
 <template>
     <footer>
+        <!-- Icons by Aranagraphics, Freepik, juicy_fish, Becris, Pixel Buddha Premium & Afian Rochmah Afif -->
         <span>AlexKist.com © {{ new Date().getFullYear() }}</span><br/>
         <div>
             <span>Built with</span>
@@ -13,7 +14,6 @@
                 title="Astro"
                 src="/images/icons/astro.svg" />
         </div>
-        <span>Icons by Aranagraphics, Freepik, juicy_fish, Becris, Pixel Buddha Premium & Afian Rochmah Afif</span>
     </footer>
 </template>
 

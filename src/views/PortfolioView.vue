@@ -6,9 +6,9 @@
     </header>
     <main>
         <Project 
-            :name="'MakeDrink'"
+            name="MakeDrink"
             :complete="true"
-            :liveLink="'https://makedr.ink'"
+            liveLink="https://makedr.ink"
             :gitHub="'https://github.com/akist529/cocktail-mixer'"
             :techStack="['TypeScript', 'SASS', 'Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']"
             :windowWidth="windowWidth">
@@ -19,12 +19,13 @@
             </ul>
         </Project>
         <Project 
-            :name="'Gym Tracker'"
-            :complete="false"
-            :liveLink="''"
-            :gitHub="''"
+            name="LiftShark"
+            :complete="true"
+            liveLink="https://liftshark.org"
+            gitHub="https://github.com/akist529/gym-tracker"
             :techStack="['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Strapi']"
-            :windowWidth="windowWidth">
+            :windowWidth="windowWidth"
+        >
             <ul>
                 <li>Full stack fitness tracking application</li>
                 <li>Fetches data from public API to provide list of exercises</li>
@@ -32,13 +33,28 @@
                 <li>Uses Pinia store to manage client state</li>
             </ul>
         </Project>
+        <Project
+            name="Education Royale Gaming"
+            :complete="false"
+            liveLink="https://educationroyalegaming.com/"
+            gitHub="https://github.com/akist529/education-royale-gaming"
+            :techStack="['TypeScript', 'Next.js', 'Chakra UI']"
+            :windowWidth="windowWidth"
+        >
+            <ul>
+                <li>Worked closely with business leader to create an appealing user experience</li>
+                <li>Uses Chakra UI for a sleek and scalable UI</li>
+            </ul>
+        </Project>
     </main>
 </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Project from 'components/Project.vue'
+// Vue imports
+import { defineComponent } from 'vue';
+// Local components
+import Project from 'components/Project.vue';
 
 export default defineComponent({
     data () {

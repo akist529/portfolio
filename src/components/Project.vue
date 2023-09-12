@@ -1,18 +1,39 @@
 <template>
     <article class="project">
         <h4>&lt;{{ name }} /></h4>
-        <div v-if="!complete" class="progress">
+        <div
+            v-if="!complete"
+            class="progress"
+        >
             <strong>IN PROGRESS</strong>
         </div>
         <picture>
-            <source media="(min-width:992px)" :srcset="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-laptop.webp`" width="384" />
-            <source media="(min-width:600px)" :srcset="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-tablet.webp`" width="256" />
-            <img :src="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-mobile.webp`" :alt="`${name} Preview`" width="192" />
+            <source
+                media="(min-width:992px)"
+                :srcset="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-laptop.webp`"
+                width="384"
+            />
+            <source
+                media="(min-width:600px)"
+                :srcset="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-tablet.webp`"
+                width="256"
+            />
+            <img
+                :src="`/images/previews/${name.toLowerCase().replaceAll(' ', '')}-mobile.webp`"
+                :alt="`${name} Preview`"
+                width="192"
+            />
         </picture>
         <div class="description">
-            <div class="desc-corner" style="top: 0; left: 0;"></div>
+            <div
+                class="desc-corner"
+                style="top: 0; left: 0;"
+            ></div>
             <slot></slot>
-            <div class="desc-corner" style="right: 0; bottom: 0; transform: rotate(180deg)"></div>
+            <div
+                class="desc-corner"
+                style="right: 0; bottom: 0; transform: rotate(180deg)"
+            ></div>
         </div>
         <div class="tech-stack">
             <header class="stack-header">
@@ -22,16 +43,27 @@
             <ul>
                 <li v-for="tech in techStack">
                     <span>{{ tech }}</span>
-                    <span class="tech-img" :style="{backgroundImage: `url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.svg)`}"></span>
+                    <span
+                        class="tech-img"
+                        :style="{backgroundImage: `url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.svg), url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.png)`}"
+                    ></span>
                 </li>
             </ul>
         </div>
         <ul class="links">
             <li>
-                <a :href="liveLink" target="_blank" class="link live-link">Link</a>
+                <a
+                    :href="liveLink"
+                    target="_blank"
+                    class="link live-link"
+                >Link</a>
             </li>
             <li>
-                <a :href="gitHub" target="_blank" class="link git-link">Repo</a>
+                <a
+                    :href="gitHub"
+                    target="_blank"
+                    class="link git-link"
+                >Repo</a>
             </li>
         </ul>
     </article>
