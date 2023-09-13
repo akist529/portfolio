@@ -25,11 +25,33 @@
             </ul>
         </nav>
         <ul>
-            <a href="https://github.com/akist529" target="_blank"><HeaderItem name="github" :mobileMenu="mobileMenu" /></a>
-            <a href="https://www.linkedin.com/in/alexkist" target="_blank"><HeaderItem name="linkedin" :mobileMenu="mobileMenu" /></a>
-            <HeaderItem 
-                name="resume" 
-                :mobileMenu="mobileMenu" />
+            <a
+                href="https://github.com/akist529"
+                target="_blank"
+            >
+                <HeaderItem
+                    name="github"
+                    :mobileMenu="mobileMenu"
+                />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/alexkist"
+                target="_blank"
+            >
+                <HeaderItem
+                    name="linkedin"
+                    :mobileMenu="mobileMenu"
+                />
+            </a>
+            <a
+                href="resume.pdf"
+                target="_blank"
+            >
+                <HeaderItem 
+                    name="resume" 
+                    :mobileMenu="mobileMenu"
+                />
+            </a>
         </ul>
     </header>
 </template>

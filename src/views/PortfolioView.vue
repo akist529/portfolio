@@ -7,7 +7,6 @@
     <main>
         <Project 
             name="MakeDrink"
-            :complete="true"
             liveLink="https://makedr.ink"
             :gitHub="'https://github.com/akist529/cocktail-mixer'"
             :techStack="['TypeScript', 'SASS', 'Next.js', 'Redux', 'Golang', 'SQLite', 'Apache']"
@@ -20,7 +19,6 @@
         </Project>
         <Project 
             name="LiftShark"
-            :complete="true"
             liveLink="https://liftshark.org"
             gitHub="https://github.com/akist529/gym-tracker"
             :techStack="['TypeScript', 'SASS', 'Vue', 'Pinia', 'Vue Query', 'Vuetify', 'Strapi']"
@@ -35,7 +33,6 @@
         </Project>
         <Project
             name="Education Royale Gaming"
-            :complete="false"
             liveLink="https://educationroyalegaming.com/"
             gitHub="https://github.com/akist529/education-royale-gaming"
             :techStack="['TypeScript', 'Next.js', 'Chakra UI']"

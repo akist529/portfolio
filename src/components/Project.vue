@@ -1,12 +1,6 @@
 <template>
     <article class="project">
         <h4>&lt;{{ name }} /></h4>
-        <div
-            v-if="!complete"
-            class="progress"
-        >
-            <strong>IN PROGRESS</strong>
-        </div>
         <picture>
             <source
                 media="(min-width:992px)"
@@ -88,7 +82,7 @@ export default defineComponent({
 .project {
     /* Positioning */
     display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-columns: 100%;
         justify-items: center;
         align-items: center;
@@ -98,49 +92,12 @@ export default defineComponent({
         grid-row: 1 / 2;
     }
 
-    .progress {
-        grid-row: 2 / 3;
-        display: grid;
-        grid-template-rows: 16px 24px 16px;
-        grid-template-columns: auto;
-        justify-items: center;
-        align-items: center;
-        background-color: #d9e319;
-        padding: 5px;
-        border-radius: 10px;
-
-        strong {
-            color: black;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-
-        &::before,
-        &::after {
-            content: '';
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(45deg, #d9e319 25%, #1c1c1c 25%, #1c1c1c 50%, #d9e319 50%, #d9e319 75%, #1c1c1c 75%, #1c1c1c 100%);
-            background-size: 56.57px 56.57px;
-        }
-
-        &::before {
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-
-        &::after {
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-    }
-
     picture {
-        grid-row: 3 / 4;
+        grid-row: 2 / 3;
     }
 
     .description {
-        grid-row: 4 / 5;
+        grid-row: 3 / 4;
         width: 90%;
         position: relative;
         padding: 20px;
@@ -155,7 +112,7 @@ export default defineComponent({
     }
 
     .tech-stack {
-        grid-row: 6 / 7;
+        grid-row: 5 / 6;
         position: relative;
 
         .stack-header {
@@ -242,7 +199,7 @@ export default defineComponent({
 
     .links {
         /* Positioning */
-        grid-row: 7 / 8;
+        grid-row: 6 / 7;
         display: flex;
             justify-content: center;
             align-items: center;
@@ -298,7 +255,7 @@ export default defineComponent({
 @media only screen and (min-width: 600px) {
     .project {
         max-width: calc(50% - 40px);
-        grid-template-rows: auto 64px auto 250px auto auto auto;
+        grid-template-rows: auto auto 250px auto auto auto;
 
         .tech-stack {
             ul {
