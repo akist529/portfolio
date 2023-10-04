@@ -15,7 +15,6 @@
             <strong>Hi, I'm Alex!</strong>
             <ul>
                 <li>Industrial Engineer turned Software Engineer</li>
-                <li>1.5 years self-taught experience</li>
                 <li>Specialized in Front-End</li>
                 <li>Capable in Back-End</li>
                 <li>JavaScript, TypeScript, React, Next.js, Vue</li>
@@ -98,22 +97,18 @@
                 }
 
                 &:nth-child(2)::before {
-                    background-image: url('/images/icons/self-taught.png');
-                }
-
-                &:nth-child(3)::before {
                     background-image: url('/images/icons/front-end.png');
                 }
 
-                &:nth-child(4)::before {
+                &:nth-child(3)::before {
                     background-image: url('/images/icons/back-end.png');
                 }
 
-                &:nth-child(5)::before {
+                &:nth-child(4)::before {
                     background-image: url('/images/icons/frontend-tech.png');
                 }
 
-                &:nth-child(6)::before {
+                &:nth-child(5)::before {
                     background-image: url('/images/icons/backend-tech.png');
                 }
             }
