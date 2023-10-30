@@ -3,7 +3,7 @@
         <figure>
             <img 
                 alt="Alex Kist" 
-                src="/images/about.jpeg" />
+                src="/images/about.webp" />
         </figure>
         <article class="about-content">
             <header class="about-header">
