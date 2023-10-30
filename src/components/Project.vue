@@ -131,7 +131,7 @@ export default defineComponent({
             height: 48px;
 
             /* Visual */
-            background-image: url('/images/backgrounds/binding_dark.png');
+            background-image: url('/images/backgrounds/binding_dark.webp');
             border-top: 3px solid rgb(130,35,35);
                 border-left: 3px solid rgb(130,35,35);
                 border-right: 3px solid rgb(130,35,35);
@@ -169,7 +169,7 @@ export default defineComponent({
             /* Visual */
             list-style-type: none;
             text-transform: uppercase;
-            background-image: url('/images/backgrounds/binding_dark.png');
+            background-image: url('/images/backgrounds/binding_dark.webp');
             border: 3px solid rgb(130,35,35);
                 border-radius: 10px;
             filter: drop-shadow(0px 10px 3px black);

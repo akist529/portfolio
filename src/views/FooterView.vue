@@ -30,7 +30,7 @@
             align-items: center;
 
         /* Visual */
-        background-image: url('/images/backgrounds/footer_lodyas.png');
+        background-image: url('/images/backgrounds/footer_lodyas.webp');
         padding: 10px 20px;
         font-size: 16px;
         text-align: center;
