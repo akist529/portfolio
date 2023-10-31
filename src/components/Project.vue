@@ -39,7 +39,7 @@
                     <span>{{ tech }}</span>
                     <span
                         class="tech-img"
-                        :style="{backgroundImage: `url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.svg), url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.png)`}"
+                        :style="{backgroundImage: `url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.svg), url(/images/icons/${tech.toLowerCase().replaceAll('.', '').replaceAll(' ', '-')}.webp)`}"
                     ></span>
                 </li>
             </ul>

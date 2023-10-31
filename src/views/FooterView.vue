@@ -31,7 +31,7 @@
 
         /* Visual */
         background-image: url('/images/backgrounds/footer_lodyas.webp');
-        padding: 10px 20px;
+        padding: 30px 20px;
         font-size: 16px;
         text-align: center;
         
