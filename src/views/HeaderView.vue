@@ -110,7 +110,7 @@ export default defineComponent({
         z-index: 999;
 
         /* Visual */
-        background-image: url('/images/backgrounds/footer_lodyas.png');
+        background-image: url('/images/backgrounds/footer_lodyas.webp');
         padding: 10px 5px;
         animation: 1s header-spawn 1s forwards;
         border-bottom: 2px solid rgb(200, 200, 200);

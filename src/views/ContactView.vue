@@ -69,7 +69,7 @@ export default defineComponent({
         display: flex;
             justify-content: center;
             align-items: center;
-        background-image: url("/images/backgrounds/binding_dark.png"); 
+        background-image: url("/images/backgrounds/binding_dark.webp"); 
         border: 6px solid rgb(130, 35, 35);
             border-radius: 10px;
         filter: drop-shadow(black 0px 10px 3px);
